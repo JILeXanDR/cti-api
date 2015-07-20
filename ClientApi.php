@@ -6,19 +6,30 @@ class ClientApi extends Api
 {
     public function search($params = [])
     {
-        //parent::search($params);
+        $json = json_decode(file_get_contents('data.json'), true);
 
-        $clients = file_get_contents('clients.json');
+        $this->data = $json['clients'];
 
-        $json = json_decode($clients, true);
-
-        $clients = $json['items'];
-
-        foreach ($clients as $client) {
-
-            if ($client['id'] == $params['id']) {
-                $this->data[] = $client;
+        foreach ($this->data as $key => $client) {
+            if (!$this->compare($client, $params)) {
+                unset($this->data[$key]);
             }
         }
+    }
+
+    private function compare($row, $params)
+    {
+        foreach ($params as $name => $value) {
+
+            if (empty($value)) {
+                break;
+            }
+
+            if (!empty($row[$name]) && ($row[$name] != $value)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

@@ -2,17 +2,24 @@
 
 ini_set('display_errors', true);
 
-if (empty($_REQUEST['search'])) {
-    die('api');
+$request = $_REQUEST;
+
+if (empty($request['search'])) {
+    include 'example.html';
+    exit;
 }
 
-$searchType = $_REQUEST['search'];
+$searchType = $request['search'];
+
+unset($request['search']);
+
+$params = $request;
 
 require_once 'Api.php';
 require_once 'ClientApi.php';
 
 $api = new ClientApi();
 
-$api->search($_REQUEST);
+$api->search($params);
 
 echo $api->getResponse();
