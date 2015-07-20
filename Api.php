@@ -2,7 +2,7 @@
 
 abstract class Api
 {
-    protected $data = [];
+    protected $data = null;
 
     abstract public function search($params = []);
 
@@ -11,5 +11,21 @@ abstract class Api
         header('Content-Type: application/json');
 
         return json_encode($this->data);
+    }
+
+    protected function compare($row, $params)
+    {
+        foreach ($params as $name => $value) {
+
+            if (empty($value)) {
+                break;
+            }
+
+            if (!empty($row[$name]) && ($row[$name] != $value)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

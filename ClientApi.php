@@ -16,20 +16,4 @@ class ClientApi extends Api
             }
         }
     }
-
-    private function compare($row, $params)
-    {
-        foreach ($params as $name => $value) {
-
-            if (empty($value)) {
-                break;
-            }
-
-            if (!empty($row[$name]) && ($row[$name] != $value)) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }

@@ -1,9 +1,10 @@
 {
     "clients": [
-        {"id": "1", "name": "Name1"},
-        {"id": "2", "name": "Name2"},
-        {"id": "3", "name": "Name3"},
-        {"id": "4", "name": "Name4"},
-        {"id": "5", "name": "Name5"}
+        {"id": "1", "name": "Name1", "type": "legal", "phone": "911", "birthday": "1988-02-17"},
+        {"id": "2", "name": "Name2", "type": "legal", "phone": "911", "birthday": "1990-04-01"},
+        {"id": "3", "name": "Name3", "type": "legal", "phone": "911", "birthday": "1987-02-20"},
+        {"id": "4", "name": "Name4", "type": "legal", "phone": "911", "birthday": "1993-12-28"},
+        {"id": "5", "name": "Name5", "type": "legal", "phone": "911", "birthday": "1978-06-05"},
+        {"id": "6", "name": "Name6", "type": "legal", "phone": "911", "birthday": "1955-11-11"}
     ]
 }

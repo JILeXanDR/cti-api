@@ -2,6 +2,8 @@
 
 ini_set('display_errors', true);
 
+require_once 'ClientApi.php';
+
 $request = $_REQUEST;
 
 if (empty($request['search'])) {
@@ -14,9 +16,6 @@ $searchType = $request['search'];
 unset($request['search']);
 
 $params = $request;
-
-require_once 'Api.php';
-require_once 'ClientApi.php';
 
 $api = new ClientApi();
 
