@@ -8,11 +8,11 @@ class ClientApi extends Api
     {
         $json = json_decode(file_get_contents('data.json'), true);
 
-        $this->data = $json['clients'];
+        $clients = $json['clients'];
 
-        foreach ($this->data as $key => $client) {
-            if (!$this->compare($client, $params)) {
-                unset($this->data[$key]);
+        foreach ($clients as $key => $client) {
+            if ($this->compare($client, $params)) {
+                $this->data[] = $client;
             }
         }
     }

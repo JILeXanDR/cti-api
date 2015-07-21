@@ -2,7 +2,7 @@
 
 abstract class Api
 {
-    protected $data = null;
+    protected $data = [];
 
     abstract public function search($params = []);
 
