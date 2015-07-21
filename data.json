@@ -1,10 +1,10 @@
 {
     "clients": [
-        {"id": "1", "name": "Name1", "type": "legal", "phone": "911", "birthday": "1988-02-17"},
-        {"id": "2", "name": "Name2", "type": "legal", "phone": "911", "birthday": "1990-04-01"},
-        {"id": "3", "name": "Name3", "type": "legal", "phone": "911", "birthday": "1987-02-20"},
-        {"id": "4", "name": "Name4", "type": "legal", "phone": "911", "birthday": "1993-12-28"},
-        {"id": "5", "name": "Name5", "type": "legal", "phone": "911", "birthday": "1978-06-05"},
-        {"id": "6", "name": "Name6", "type": "legal", "phone": "911", "birthday": "1955-11-11"}
+        {"id": "1", "Name": "Name1", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1988-02-17", "FCC": "12345678"},
+        {"id": "2", "Name": "Name2", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1990-04-01", "FCC": "12345678"},
+        {"id": "3", "Name": "Name3", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1987-02-20", "FCC": "12345678"},
+        {"id": "4", "Name": "Name4", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1993-12-28", "FCC": "12345678"},
+        {"id": "5", "Name": "Name5", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1978-06-05", "FCC": "12345678"},
+        {"id": "6", "Name": "Name6", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1955-11-11", "FCC": "12345678"}
     ]
 }

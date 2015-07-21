@@ -13,6 +13,11 @@ abstract class Api
         return json_encode($this->data);
     }
 
+    protected function like($string, $like)
+    {
+        return stripos($string, $like) !== false;
+    }
+
     protected function compare($row, $params)
     {
         foreach ($params as $name => $value) {
