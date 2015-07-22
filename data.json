@@ -1,7 +1,7 @@
 {
     "clients": [
         {"id": "1", "Name": "Name1", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1988-02-17", "FCC": "12345678"},
-        {"id": "2", "Name": "Name2", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1990-04-01", "FCC": "12345678"},
+        {"id": "2", "Name": "Name2", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1990-04-01", "FCC": "12345678"},
         {"id": "3", "Name": "Name3", "IsLegalPerson": "false", "phone": "911", "Birthdate": "1987-02-20", "FCC": "12345678"},
         {"id": "4", "Name": "Name4", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1993-12-28", "FCC": "12345678"},
         {"id": "5", "Name": "Name5", "IsLegalPerson": "true", "phone": "911", "Birthdate": "1978-06-05", "FCC": "12345678"},

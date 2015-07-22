@@ -6,9 +6,9 @@ class ClientApi extends Api
 {
     public function search($params = [])
     {
-        $json = json_decode(file_get_contents('data.json'), true);
+        $data = json_decode(file_get_contents('data.json'), true);
 
-        $clients = $json['clients'];
+        $clients = $data['clients'];
 
         foreach ($clients as $key => $client) {
             if ($this->compare($client, $params)) {

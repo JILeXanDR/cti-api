@@ -18,16 +18,37 @@ abstract class Api
         return stripos($string, $like) !== false;
     }
 
+    /**
+     * Точное совпадение
+     * @param $string
+     * @param $value
+     * @return bool
+     */
+    protected function exact($string, $value)
+    {
+        return $string === $value;
+    }
+
+    /**
+     * Сравнить строку с входящими параметрами для фильтрации
+     * @param $row
+     * @param $params
+     * @return bool
+     */
     protected function compare($row, $params)
     {
-        foreach ($params as $name => $value) {
+        foreach ($params as $attribute => $value) {
 
             if (empty($value)) {
                 break;
             }
 
-            if (!empty($row[$name]) && ($row[$name] != $value)) {
-                return false;
+            $existValue = $row[$attribute];
+
+            if ($attribute === 'Name') {
+                return $this->like($existValue, $value);
+            } else {
+                return $this->exact($existValue, $value);
             }
         }
 
