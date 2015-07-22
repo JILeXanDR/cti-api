@@ -39,7 +39,7 @@ abstract class Api
     {
         foreach ($filters as $attribute => $value) {
 
-            if (empty($value)) {
+            if (empty($value) || empty($row[$attribute])) {
                 continue;
             }
 

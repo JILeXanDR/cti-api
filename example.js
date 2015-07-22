@@ -2,7 +2,7 @@ $.ajax({
 	type: 'get',
 	url: 'http://apm.andersenlab.com/api/?search=clients',
 	data: {
-		Phone: 911
+		phone: 911
 	},
 	success: function (res) {
 		console.info(res);
