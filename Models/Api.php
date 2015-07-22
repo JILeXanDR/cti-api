@@ -32,12 +32,12 @@ abstract class Api
     /**
      * Сравнить строку с входящими параметрами для фильтрации
      * @param $row
-     * @param $params
+     * @param $filters
      * @return bool
      */
-    protected function compare($row, $params)
+    protected function compare($row, $filters)
     {
-        foreach ($params as $attribute => $value) {
+        foreach ($filters as $attribute => $value) {
 
             if (empty($value)) {
                 break;
@@ -46,9 +46,13 @@ abstract class Api
             $existValue = $row[$attribute];
 
             if ($attribute === 'Name') {
-                return $this->like($existValue, $value);
+                $res = $this->like($existValue, $value);
             } else {
-                return $this->exact($existValue, $value);
+                $res = $this->exact($existValue, $value);
+            }
+
+            if (!$res) {
+                return false;
             }
         }
 
