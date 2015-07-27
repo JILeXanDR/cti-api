@@ -28,34 +28,4 @@ abstract class Api
     {
         return $string === $value;
     }
-
-    /**
-     * Сравнить строку с входящими параметрами для фильтрации
-     * @param $row
-     * @param $filters
-     * @return bool
-     */
-    protected function compare($row, $filters)
-    {
-        foreach ($filters as $attribute => $value) {
-
-            if (empty($value) || empty($row[$attribute])) {
-                continue;
-            }
-
-            $existValue = $row[$attribute];
-
-            if ($attribute === 'Name') {
-                $res = $this->like($existValue, $value);
-            } else {
-                $res = $this->exact($existValue, $value);
-            }
-
-            if (!$res) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 }

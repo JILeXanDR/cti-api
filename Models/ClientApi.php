@@ -16,4 +16,36 @@ class ClientApi extends Api
             }
         }
     }
+
+    /**
+     * Сравнить строку с входящими параметрами для фильтрации
+     * @param $row
+     * @param $filters
+     * @return bool
+     */
+    protected function compare($row, $filters)
+    {
+        foreach ($filters as $attribute => $value) {
+
+            if (empty($value) || empty($row[$attribute])) {
+                continue;
+            }
+
+            $existValue = $row[$attribute];
+
+            switch ($attribute) {
+                case 'Name':
+                    $res = $this->like($existValue, $value);
+                    break;
+                default:
+                    $res = $this->exact($existValue, $value);
+            }
+
+            if (!$res) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
