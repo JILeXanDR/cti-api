@@ -1,0 +1,172 @@
+{
+    "tree": [
+        {
+            "id": 1,
+            "listKey": "1.",
+            "title": "Продукты клиента",
+            "authRequired": true,
+            "number": 10000,
+            "parent": null
+        },
+        {
+            "id": 2,
+            "listKey": "1.1",
+            "title": "Баланс карты",
+            "authRequired": true,
+            "number": 20000,
+            "parent": 1
+        },
+        {
+            "id": 3,
+            "listKey": "1.2",
+            "title": "Информация о кредитах",
+            "authRequired": true,
+            "number": 30000,
+            "parent": 1
+        },
+        {
+            "id": 4,
+            "listKey": "1.3",
+            "title": "Информация о текущих счетах",
+            "authRequired": true,
+            "number": 40000,
+            "parent": 1
+        },
+        {
+            "id": 5,
+            "listKey": "1.4",
+            "title": "Информация о депозитах",
+            "authRequired": true,
+            "number": 50000,
+            "parent": 1
+        },
+        {
+            "id": 6,
+            "listKey": "2.",
+            "title": "Операции с PIN",
+            "authRequired": true,
+            "number": 60000,
+            "parent": null
+        },
+        {
+            "id": 7,
+            "listKey": "2.1.",
+            "title": "Изменение U-PIN",
+            "authRequired": true,
+            "number": 70000,
+            "parent": 6
+        },
+        {
+            "id": 8,
+            "listKey": "3.",
+            "title": "Продукты и услуги Банка",
+            "authRequired": false,
+            "number": 80000,
+            "parent": null
+        },
+        {
+            "id": 9,
+            "listKey": "3.1.",
+            "title": "Кредиты, карты и вклады",
+            "authRequired": false,
+            "number": 90000,
+            "parent": 8
+        },
+        {
+            "id": 10,
+            "listKey": "3.2",
+            "title": "Ипотечное кредитование",
+            "authRequired": false,
+            "number": 10100,
+            "parent": 8
+        },
+        {
+            "id": 11,
+            "listKey": "3.3",
+            "title": "Иные продукты",
+            "authRequired": false,
+            "number": 12000,
+            "parent": 8
+        },
+        {
+            "id": 12,
+            "listKey": "4.",
+            "title": "Обслуживание юр. лиц",
+            "authRequired": false,
+            "number": 13000,
+            "parent": null
+        },
+        {
+            "id": 13,
+            "listKey": "4.1.",
+            "title": "Уточнение баланса счета",
+            "authRequired": false,
+            "number": 14000,
+            "parent": 12
+        },
+        {
+            "id": 14,
+            "listKey": "4.2.",
+            "title": "Соединение со специалистом",
+            "authRequired": false,
+            "number": 15000,
+            "parent": 12
+        },
+        {
+            "id": 15,
+            "listKey": "4.3.",
+            "title": "Техническая поддержка",
+            "authRequired": false,
+            "number": 16000,
+            "parent": 12
+        },
+        {
+            "id": 16,
+            "listKey": "4.5.",
+            "title": "Обслуживание з/п карт",
+            "authRequired": false,
+            "number": 17000,
+            "parent": 12
+        },
+        {
+            "id": 17,
+            "listKey": "5.",
+            "title": "Информация по интернет и мобильному банку",
+            "authRequired": false,
+            "number": 18000,
+            "parent": null
+        },
+        {
+            "id": 18,
+            "listKey": "6.",
+            "title": "Курсы валют",
+            "authRequired": false,
+            "number": 19000,
+            "parent": null
+        },
+        {
+            "id": 19,
+            "listKey": "6.1.",
+            "title": "Курсы обменных пунктов",
+            "authRequired": false,
+            "number": 211000,
+            "parent": 18
+        },
+        {
+            "id": 20,
+            "listKey": "6.2.",
+            "title": "Курсы по счетам физ.лиц",
+            "authRequired": false,
+            "number": 22000,
+            "parent": 18
+        },
+        {
+            "id": 21,
+            "listKey": "6.3.",
+            "title": "Курсы ЦБ",
+            "authRequired": false,
+            "number": 23000,
+            "parent": 18
+        }
+    ]
+}
