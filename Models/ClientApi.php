@@ -37,6 +37,9 @@ class ClientApi extends Api
                 case 'Name':
                     $res = $this->like($existValue, $value);
                     break;
+                case 'PhoneNumbers':
+                    $res = $this->inArray($existValue, $value);
+                    break;
                 default:
                     $res = $this->exact($existValue, $value);
             }

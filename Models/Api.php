@@ -28,4 +28,9 @@ abstract class Api
     {
         return $string === $value;
     }
+
+    protected function inArray($array, $value)
+    {
+        return in_array($value, $array);
+    }
 }
